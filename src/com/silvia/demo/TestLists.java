@@ -1,13 +1,21 @@
 package com.silvia.demo;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class TestLists {
 
     public static void arrayListMethod() {
         List<Integer> scoreList = new ArrayList<>();
+        List<Student> studentListA = new ArrayList<>();
+        List<Student> studentListB = new ArrayList<>();
+        List<String> studentName = new ArrayList<>(Arrays.asList("Anna", "Benny", "Sanna", "Kaj", "Kajsa"));
+        Random randomAge = new Random();
+
+        for (String name : studentName) {
+            int age = randomAge.nextInt(20, 40);
+
+            studentListB.add(new Student(name, age));
+        }
 
         System.out.println("After initializing scoreList in arrayListMethod " + scoreList);
 
@@ -30,6 +38,13 @@ public class TestLists {
         System.out.println("Getting from scoreList in arrayListMethod by Variable " + numByIndex);
         System.out.println("Getting from scoreList in arrayListMethod in s.o.u.t " + scoreList.get(2));
         System.out.println(" ");
+
+        for (int i = 0; i < 5; i++) {
+
+            studentListA.add(new Student("B" + i, 1+ i));
+        }
+        System.out.println("For studentListA " + studentListA + "\n");
+        System.out.println("For studentListB " + studentListB + "\n");
     }
 
     public static void linkedListMethod() {
