@@ -4,6 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Practise assignment 2");
+        System.out.println("Practise assignment 2 \n");
+
+        TestLists.arrayListMethod();
+        TestLists.linkedListMethod();
     }
 }
