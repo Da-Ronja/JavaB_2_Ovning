@@ -34,13 +34,10 @@ public class TestLists {
 
     public static void linkedListMethod() {
         List<Integer> scoreList = new LinkedList<>();
+        LinkedList<Integer> listNum = new LinkedList<>();
 
         System.out.println("After initializing scoreList in linkedListMethod " + scoreList);
 
-        /* scoreList.add(3);
-        scoreList.add(8);
-        scoreList.add(9);
-        scoreList.add(6); */
         scoreList = addLinkedListMethod(3, 8, 9, 6);
 
         System.out.println("After adding to scoreList in linkedListMethod " + scoreList);
@@ -57,6 +54,14 @@ public class TestLists {
         System.out.println("Getting from scoreList in linkedListMethod by Variable " + numByIndex);
         System.out.println("Getting from scoreList in linkedListMethod in s.o.u.t " + scoreList.get(0));
         System.out.println(" ");
+
+        // scoreList.addFirst(); // doesn't work in List
+        listNum.addFirst(3);
+        listNum.addFirst(2);
+        listNum.addLast(4);
+        listNum.addFirst(1);
+
+        System.out.println("Displaying addFirst and addLast in listNum " + listNum);
     }
 
     public static List<Integer> addLinkedListMethod(int x, int y, int z, int w) {
